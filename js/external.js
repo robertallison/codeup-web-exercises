@@ -28,3 +28,22 @@ hoursFacebook = parseInt(hoursFacebook);
 var totalPaycheck = Google*hoursGoogle + Amazon*hoursAmazon + Facebook*hoursFacebook
 alert("Wow! You made $" + totalPaycheck + " this week!")
 
+
+var fullClass = confirm("Please hit the approval if the class has empty seats and does not conflict with your schedule, otherwise hit cancel");
+console.log(fullClass);
+if (fullClass >= 1) {
+    alert("Congratulations, you have been added to this class");
+} else {
+    alert("Our deepest apologies, you will not be able to join this class");
+}
+
+var premium = confirm("Select OK if you are a premium member, otherwise hit Cancel");
+var numItems = confirm("Did you buy 3 or more items? Select OK if yes, otherwise hit Cancel");
+var expOffer = confirm("Is the offer still valid? Please do not lie to us, we have cameras. Select Ok for yes, otherwise hit Cancel");
+if (premium >= 1, numItems >= 1, expOffer >=1){
+    alert("The offer has been applied to your purchase, thank you for shopping with us!");
+} else if (premium <= 1, numItems < 1, expOffer >=1){
+    alert("The offer has been applied to your purchase, thank you for shopping with us!");
+} else {
+    alert("We are terribly sorry, however the offer is not valid with your purchase. Thank you for shopping with us!");
+}
