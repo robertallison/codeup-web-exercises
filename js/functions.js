@@ -9,11 +9,9 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
     function sayHello(name){
-        console.log("Hello!");
        var name = prompt("What is your name?");
        alert("Hello " + name);
-
-}
+    }
     sayHello();
 /**
  * TODO:
@@ -53,8 +51,10 @@ var random = Math.floor((Math.random() * 3) + 1);
  */
     function isTwo(random){
         if(random == 2){
+            return true;
             console.log("True");
         } else{
+            return false;
             console.log("False");
         }
 }
@@ -72,9 +72,9 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
     function calculateTip(x, y, z){
-       var x = prompt("Please input tip percentage in decimal form");
+       var x = prompt("Please input tip percentage");
        var y = prompt("Please input total price of meal")
-        var z = x*y;
+        var z = (x/100)*y;
        alert("Your tip is $" + z);
 }
 calculateTip();
@@ -101,8 +101,8 @@ calculateTip();
  */
 function applyDiscount(origPrice, discPercent, offDisc, newPrice){
     var origPrice = prompt("What is the original price of the item?");
-    var discPercent = prompt("What is the discount percentage in decimal form?")
-    var offDisc = origPrice*discPercent;
+    var discPercent = prompt("What is the discount percentage?")
+    var offDisc = origPrice*(discPercent/100);
     var newPrice = origPrice-offDisc;
     alert("Your discounted price is: $" + newPrice);
 }
