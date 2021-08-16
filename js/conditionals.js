@@ -148,7 +148,7 @@ alert(analyzeColors(newColor));
         calculateTotal();
 
         */
-    */
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
