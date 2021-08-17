@@ -182,9 +182,23 @@ var confirmNum = confirm("Please press OK if you would like to enter a number, o
 if (confirmNum === true) {
     var number = prompt("Please type your number:")
     var betterNum = parseFloat(number);
-    if(betterNum % 2 === 0) {
-        alert("Your number is even");
-
+    var hundredNum = betterNum + 100;
+    if (isNaN(number)==0) {
+        if (betterNum % 2 === 0) {
+            if (betterNum < 0) {
+                alert("Your number is even, negative, and your number plus 100 is " + hundredNum);
+            } else {
+                alert("Your number is even, positive, and your number plus 100 is " + hundredNum)
+            }
+        } else {
+            if (betterNum < 0) {
+                alert("Your number is odd, negative, and your number plus 100 is " + hundredNum)
+            } else {
+                alert("Your number is odd, positive, and your number plus 100 is " + hundredNum);
+            }
+        }
+    } else {
+        alert("Please input a real number")
     }
 } else {
     alert("No worries, have a nice day");
