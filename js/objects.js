@@ -122,5 +122,5 @@
      *   `showBookInfo` function.
      */
 
-    function
+
 })();
