@@ -73,3 +73,7 @@ a {
 .text-muted {
     color: var(--main-link-color);
 }
+.who-to-follow {
+    float: right;
+    width: calc(25%);
+}
