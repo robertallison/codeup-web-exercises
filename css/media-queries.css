@@ -36,3 +36,31 @@ h2 {
     font-style: italic;
 }
 
+@media all and (min-width: 525px) {
+    * {
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    h1{
+        float:left;
+    }
+    .hidden-on-desktop {
+        display: none;
+        background-color: lightblue;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 5px;
+
+    }
+    .main {
+        float: left;
+    }
+    .sub-section {
+        margin-right: 2rem;
+        padding: 2rem 0;
+        float: right;
+    }
+}
