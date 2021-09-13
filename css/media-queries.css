@@ -1,0 +1,14 @@
+/* need to go back and redo this */
+
+.alert-info{
+        background-color: lightblue;
+        text-align: center;
+        flex-direction: column;
+    justify-content: center;
+    border: 1px solid gray;
+    }
+h1 {
+    font-size: 50px;
+    text-align: center;
+    font-family: Arial, Ubuntu, sans-serif;
+}
