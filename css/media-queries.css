@@ -12,3 +12,27 @@ h1 {
     text-align: center;
     font-family: Arial, Ubuntu, sans-serif;
 }
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 45px;
+}
+
+a{
+    color: blue;
+    display: flex;
+    justify-content: center;
+}
+.main{
+    margin-bottom: 2em;
+}
+h2 {
+    margin-bottom: .5em;
+}
+
+.sub-section{
+    font-style: italic;
+}
+
