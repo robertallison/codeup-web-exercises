@@ -57,8 +57,25 @@ calculateDogAge();
 // let display = setInterval(showTime, 5000);
 
 
-function greet(){
-    console.log("Hello World!");
+// function greet(){
+//     console.log("Hello World!");
+// }
+// var delayedGreeting = window.setTimeout(greet, 3000);
+// window.clearTimeout(delayedGreeting)
+
+
+// function logEvens() {
+//     var loopNum = prompt("Please input a whole number")
+//     for (var i = 0; i < loopNum; i++) {
+//         console.log("please work")
+//     }
+// }
+
+//class version of this function
+function logEvens(num){
+    for (var i = 0; i <= num; i++) {
+        if(i % 2 === 0 && i !==0) {
+            console.log(i);
+        }
+    }
 }
-var delayedGreeting = window.setTimeout(greet, 3000);
-window.clearTimeout(delayedGreeting)
