@@ -72,10 +72,20 @@ calculateDogAge();
 // }
 
 //class version of this function
-function logEvens(num){
-    for (var i = 0; i <= num; i++) {
-        if(i % 2 === 0 && i !==0) {
-            console.log(i);
+// function logEvens(num){
+//     for (var i = 0; i <= num; i++) {
+//         if(i % 2 === 0 && i !==0) {
+//             console.log(i);
+//         }
+//     }
+// }
+
+function logNum(num) {
+    for (var i = 1; i <= num; i++) {
+        if (i % 2 === 0) {
+            console.log(i + " is an even number")
+        } else {
+            console.log(i + " is an odd number")
         }
     }
 }
