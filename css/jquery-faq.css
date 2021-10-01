@@ -1,0 +1,21 @@
+.invisible {
+    color: white;
+}
+.output {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+p,
+dt {
+    font-weight: bold;
+}
+
+dd {
+    font-size: .9rem;
+    color: blue;
+}
+
+dd {
+    margin-bottom: 1em;
+}
+

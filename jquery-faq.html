@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ</title>
+    <style>
+        .invisible {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p>National Park FAQs</p>
+    <a href="#" id="make-invisible">Click for answers to selected questions.</a>
+    <dl>
+        <dt>Can I Take Home Things That I Have Found?</dt>
+        <dd class="hide">No, Please leave any and all objects where you found them.</dd>
+
+        <dt>Can I pet the wild animals?</dt>
+        <dd class="hide">No, never pet the wild animals. Please stay at a safe distance.</dd>
+
+        <dt>Can I go camping?</dt>
+        <dd class="hide">Of course! Make sure to check local guidelines and check in with park rangers.</dd>
+
+        <dt>Is it free?</dt>
+    </dl>
+    <script src="js/jquery-faq.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+        $("make-invisible").click(function(event) {
+            event.preventDefault();
+            $(".hide").addClass("invisible");
+        });
+    })</script>
+
+</div>
+</body>
+</html>
