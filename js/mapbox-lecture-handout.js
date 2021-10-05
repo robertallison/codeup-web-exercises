@@ -13,15 +13,34 @@
 
 //TODO: Set map to the San Antonio area using the coordinates [-98.4861, 29.4252]
 
-// mapboxgl.accessToken = YOUR_API_TOKEN_HERE;
-// console.log(mbKey);
+mapboxgl.accessToken = mapboxApiKey;
+console.log(mapboxApiKey);
 
+// var map = new mapboxgl.Map(
+//     {
+//         container: "map",
+//         style: "mapbox://styles/mapbox/streets-v11",
+//         center: [-98.4861, 29.4252],
+//         zoom: 15,
+//     }
+// )
 
 
 
 //TODO: Experiment with different map styles, zoom levels, and centers. You will need to reference the MapBox docs! (10 mins~)
 
-
+var map = new mapboxgl.Map(
+    {
+        // container: "map",
+        // style: "mapbox://styles/mapbox/satellite-streets-v11",
+        // zoom: 14,
+        // center: [-110.835842, 32.149989]
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v11",
+        center: [-98.467171, 29.499859, ],
+        zoom: 15,
+    }
+)
 
 
 /**********************************************
@@ -33,14 +52,23 @@
 
 
 // TODO TOGETHER: Add a marker to the map using the following coordinates [-98.4861, 29.4260]. This marker will mark the Alamo on our map.
-
+// var marker = new mapboxgl.Marker()
+//     .setLngLat([-98.4861, 29.4260])
+//     .addTo(map);
 
 // TODO TOGETHER: Change the color of the marker
-
+var marker = new mapboxgl.Marker({color: "#663399"})
+    .setLngLat([-98.467171, 29.499859])
+    .addTo(map);
 
 // TODO: Make a new marker! Let's experiment with the color and setting the LngLat [how about a marker for Codeup San Antone? -98.4895, 29.4267 Codeup Dallas? -96.8056, 32.7786]
-
+// var markerCodeup = new mapboxgl.Marker({color: "orange"})
+//     .setLngLat([-98.4895, 29.4267])
+//     .addTo(map);
 // TODO: Update the marker object to make the marker draggable. *Hint: reference the docs!
+var markerCodeup = new mapboxgl.Marker({color: "#017a36", draggable: true})
+    .setLngLat([-98.4895, 29.4267])
+    .addTo(map);
 
 /**********************************************
  * 					POPUPS
@@ -50,10 +78,17 @@
 
 
 // TODO TOGETHER: Add a popup to the map over San Antonio's Codeup. Set the html as a paragraph that says "Codeup Rocks!"
-
+// var popup = new mapboxgl.Popup()
+//     .setLngLat([-98.4895, 29.4267])
+//     .setHTML("<h6><em>Codeup Rocks!</em></h6>")
+//     .addTo(map)
 
 // TODO TOGETHER: We'll comment out the popup we just added. Next, let's add a popup to the Alamo marker!
+    var favRest = new mapboxgl.Popup()
+    .setHTML("<p>Hanzo</p>")
+    .addTo(map)
 
+    marker.setPopup(favRest)
 
 // TODO: Review the popup docs. What are some additional options we can pass to the popup? Choose one and experiment with implementing that option to a popup!
 // TODO: Try setting the text of a popup by using ".setText()" instead of ".setHTML()" - what happens with HTML tags between the two?
@@ -65,7 +100,10 @@
  *********************************************/
 // Geocoding Docs --> https://docs.mapbox.com/api/search/#geocoding
 // TODO TOGETHER: Let's set up our mapbox-geocoder-utils.js!
-
+geocode("San Antonio", mapboxApiKey).then(function (results) {
+    console.log(results);
+    map.setCenter(results);
+})
 
 // TODO TOGETHER: Using the Geocoder helper function, log the coordinates of Codeup and recenter the map to focus on Codeup.
 //https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setcenter
