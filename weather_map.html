@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+</head>
+<body>
+
+<!--jQuery ready for ajax-->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+<!--keys stored here-->
+<script src="keys.js"></script>
+<!--weather api for radar-->
+<script>
+    $.get("http://api.openweathermap.org/data/2.5/weather", {
+        APPID: openWeatherKey,
+        // q: "San Antonio, US",
+        // id: 4726206,
+        lat:29.423017,
+        lon: -98.48527,
+        units: "imperial"
+    }).done(function (data) {
+        console.log(data);
+    });
+</script>
+</body>
+</html>
