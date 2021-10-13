@@ -80,12 +80,18 @@ calculateDogAge();
 //     }
 // }
 
-function logNum(num) {
-    for (var i = 1; i <= num; i++) {
-        if (i % 2 === 0) {
-            console.log(i + " is an even number")
-        } else {
-            console.log(i + " is an odd number")
-        }
-    }
+// function logNum(num) {
+//     for (var i = 1; i <= num; i++) {
+//         if (i % 2 === 0) {
+//             console.log(i + " is an even number")
+//         } else {
+//             console.log(i + " is an odd number")
+//         }
+//     }
+// }
+
+function convertDateTime (dtNum) {
+    var dtInMs = dtNum * 1000;
+    var dateObj = new Date(dtInMs)
+    return dateObj
 }
